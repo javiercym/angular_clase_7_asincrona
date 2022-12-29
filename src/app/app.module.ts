@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ElementosModule } from './elementos/elementos.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    ElementosModule,
     AppRoutingModule
   ],
   providers: [],

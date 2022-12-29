@@ -1,0 +1,15 @@
+@keyframes lanzarDado {
+    0% {
+      /* rotación y posición inicial */
+    }
+    50% {
+      /* rotación y posición intermedia */
+    }
+    100% {
+      /* rotación y posición final */
+    }
+  }
+  
+  .dado {
+    animation: lanzarDado 1s ease-in-out;
+  }
