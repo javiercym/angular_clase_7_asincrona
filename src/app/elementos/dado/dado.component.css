@@ -1,15 +1,22 @@
-@keyframes lanzarDado {
-    0% {
-      /* rotación y posición inicial */
-    }
-    50% {
-      /* rotación y posición intermedia */
-    }
-    100% {
-      /* rotación y posición final */
-    }
-  }
-  
-  .dado {
-    animation: lanzarDado 1s ease-in-out;
-  }
+.contenido{
+    margin-top: 20px;
+}
+.dado{
+    padding:0px 100px;
+}
+
+.fondo1{
+    background-color: red;
+    color: white;
+    padding: 100px;
+    margin: 30px;
+}
+
+.fondo2{
+    background-color: black;
+    font-size: 50px;
+    color: white;
+    padding:  100px;
+    margin: 0px 30px;
+    border-radius: 80px;
+}

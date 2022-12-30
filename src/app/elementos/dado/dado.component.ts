@@ -1,4 +1,4 @@
-import { Component,ViewChild,ElementRef  } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dado',
@@ -6,34 +6,37 @@ import { Component,ViewChild,ElementRef  } from '@angular/core';
   styleUrls: ['./dado.component.css']
 })
 export class DadoComponent {
+  fondo = document.querySelector('#fondo')
   
   numero!: number;
 
-  @ViewChild('dado') dado: ElementRef = null;
-
-  constructor() { }
-
   ngOnInit(): void {
-    this.dado = this.dado.nativeElement;
+   
+  }
+  ngAfterViewInit(){
+  this. lanzarDado();
   }
 
   lanzarDado() {
-    //Animacion
-    this.dado.nativeElement.style.animation = 'lanzarDado 1s ease-in-out';
-    setTimeout(() => {
-      this.dado.nativeElement.style.animation = 'none';
-    }, 1000);
-    
+
+    if (this.fondo != null) {
+      this.fondo.classList.toggle("fondo1")
+      this.fondo.classList.toggle("fondo2")
+      console.log(this.fondo)
+    }else{
+      console.log(this.fondo)
+    }
+
     let nuevoNumero: number;
     // número aleatorio entero entre 1 y 6 (ambos incluidos)
     // this.numero = Math.floor(Math.random() * 6) + 1;
 
     //Para que no se repita el numero anterior
     do {
-      // número aleatorio entero entre 1 y 6 (ambos incluidos)
       nuevoNumero = Math.floor(Math.random() * 6) + 1;
     } while (nuevoNumero === this.numero);
     this.numero = nuevoNumero;
   }
 
 }
+
